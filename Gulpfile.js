@@ -34,14 +34,14 @@ gulp.task('stylesheets', function() {
 });
 
 // Coffeescript
-gulp.task('javascripts', function() {
-  return gulp.src(paths.coffee)
-    .pipe(sourcemaps.init())
-    .pipe(include())
-    .pipe(coffee())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./build/assets/javascripts'));
-});
+// gulp.task('javascripts', function() {
+//   return gulp.src(paths.coffee)
+//     .pipe(sourcemaps.init())
+//     .pipe(include())
+//     .pipe(coffee())
+//     .pipe(sourcemaps.write())
+//     .pipe(gulp.dest('./build/assets/javascripts'));
+// });
 
 coffeeStream = coffee({bare: true});
 coffeeStream.on('error', function(err) {});
@@ -78,13 +78,13 @@ gulp.task('watch', function() {
   gulp.watch(paths.fonts, ['fonts']);
   gulp.watch('./build/*.html', browsersync.reload);
   gulp.watch('./build/assets/stylesheets/*.css', browsersync.reload);
-  gulp.watch('./build/assets/javascripts/*.js', browsersync.reload);
+  //gulp.watch('./build/assets/javascripts/*.js', browsersync.reload);
   gulp.watch('./build/assets/images/*', browsersync.reload);
   gulp.watch('./build/assets/fonts/*', browsersync.reload);
 });
 
 // Run
-gulp.task('default', ['views', 'stylesheets', 'javascripts', 'images', 'fonts', 'server', 'watch'], function() {
+gulp.task('default', ['views', 'stylesheets',  'images', 'fonts', 'server', 'watch'], function() {
 
 });
 

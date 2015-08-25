@@ -1,0 +1,18 @@
+section#features{
+	@include outer-container();
+}
+
+article.features{
+		@include span-columns(12);
+		text-align:center;
+		padding: 20px 0;
+		@include media($tablet){
+			@include span-columns(6);
+			@include omega(2n)
+		}//tablet
+		@include media($desktop-up){
+			@include span-columns(3);
+			@include omega(4n);
+		}
+
+	}//article

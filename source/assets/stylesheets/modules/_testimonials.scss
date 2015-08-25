@@ -1,0 +1,35 @@
+
+article.why{
+	ul{
+	@include span-columns(12);
+	//@include shift(1);
+	@include media($desktop-up){
+		@include span-columns(6);
+
+
+	}
+}//ul
+}
+section#testimonials{
+	@include outer-container();
+}
+article.testimonials{
+	@include span-columns(12);
+	text-align:center;
+	img{
+ 		border-radius:50%;
+ 		float: none;
+ 		margin-right:modular-scale(2);
+ 		@include media($desktop-up){
+ 			float:left;
+ 		}
+	}
+	@include media($tablet){
+		@include span-columns(12);
+		padding:20px 5%;
+		}//tablet
+	@include media($desktop-up){
+		@include span-columns(6);
+		text-align:left;
+	}//desktop
+}//article

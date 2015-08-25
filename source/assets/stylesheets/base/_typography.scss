@@ -1,3 +1,51 @@
+@font-face {
+    font-family: 'Asap';
+    src: url('../fonts/asap-bold-webfont.eot');
+    src: url('../fonts/asap-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/asap-bold-webfont.woff') format('woff'),
+         url('../fonts/asap-bold-webfont.ttf') format('truetype'),
+        url('../fonts/asap-bold-webfont.svg#asapbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('../fonts/asap-bolditalic-webfont.eot');
+    src: url('../fonts/asap-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/asap-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/asap-bolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/asap-bolditalic-webfont.svg#asapbold_italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('../fonts/asap-italic-webfont.eot');
+    src: url('../fonts/asap-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/asap-italic-webfont.woff') format('woff'),
+         url('../fonts/asap-italic-webfont.ttf') format('truetype'),
+         url('../fonts/asap-italic-webfont.svg#asapitalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('../fonts/asap-regular-webfont.eot');
+    src: url('../fonts/asap-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/asap-regular-webfont.woff') format('woff'),
+         url('../fonts/asap-regular-webfont.ttf') format('truetype'),
+         url('../fonts/asap-regular-webfont.svg#asapregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+ 
+
 body {
   @include font-feature-settings("kern", "liga", "pnum");
   -webkit-font-smoothing: antialiased;
@@ -17,6 +65,23 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+  font-weight:400;
+  font-style: normal;
+}
+h1{
+  font-size: modular-scale(2);
+}
+h2{
+  font-size: modular-scale(1);
+}
+h3{
+  font-size: modular-scale(1);
+}
+h4{
+  font-size: modular-scale(1);
+}
+h5{
+  font-size: modular-scale(1);
 }
 
 p {

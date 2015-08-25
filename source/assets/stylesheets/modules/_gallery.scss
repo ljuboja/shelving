@@ -1,0 +1,15 @@
+section#gallery{
+	@include outer-container();
+
+  .gal-narrow{
+	@include span-columns(3);
+}
+  .gal-wide{
+	@include span-columns(6);
+}
+
+  .gal-narrow-second{
+	@include span-columns(3);
+	@include omega();
+}
+}

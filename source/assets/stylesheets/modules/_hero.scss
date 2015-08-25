@@ -1,0 +1,22 @@
+section#hero{
+	padding: 10rem 5%;
+	color:white;
+	position:relative;
+		&:after{
+		content: "";
+		position: absolute;
+		background:transparent url(../../../assets/images/counter.jpg) no-repeat;
+		background-size:cover;
+		background-position:center center;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		z-index: -1;
+	
+	}//after
+	h1{
+		//max-width:1%;
+		font-size:modular-scale(3);
+	}
+}//section

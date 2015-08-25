@@ -1,0 +1,120 @@
+.greedy-nav.greedy-nav {
+  position: relative;
+  min-width: 250px;
+  background: #fff;
+}
+.greedy-nav.greedy-nav a {
+  white-space: nowrap;
+  display: block;
+  padding: 20px 30px;
+  background: #fff;
+  font-size: 18px;
+  color: #404041;
+  text-decoration: none;
+}
+.greedy-nav.greedy-nav a:hover {
+  color: $ssred;
+}
+.greedy-nav.greedy-nav button {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  padding: 0 15px;
+  border: 0;
+  outline: none;
+  background-color: #404041;
+  color: #fff;
+  cursor: pointer;
+}
+.greedy-nav.greedy-nav button:hover {
+  background-color:$ssblack; //lighten($ssblack, 20%);
+}
+.greedy-nav.greedy-nav button::after {
+  content: attr(count);
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -16px;
+  top: 12px;
+  text-align: center;
+  background-color: $ssred;
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  font-weight: bold;
+}
+.greedy-nav.greedy-nav button:hover::after {
+  transform: scale(1.075);
+}
+.greedy-nav.greedy-nav .hamburger {
+  position: relative;
+  width: 32px;
+  height: 4px;
+  background: #fff;
+  margin: auto;
+}
+.greedy-nav.greedy-nav .hamburger:before,
+.greedy-nav.greedy-nav .hamburger:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 4px;
+  background: #fff;
+}
+.greedy-nav.greedy-nav .hamburger:before {
+  top: -8px;
+}
+.greedy-nav.greedy-nav .hamburger:after {
+  bottom: -8px;
+}
+.greedy-nav.greedy-nav .visible-links {
+  display: inline-table;
+  
+}
+.greedy-nav.greedy-nav .visible-links li {
+  display: table-cell;
+  //border-left: 1px solid #9800ff;
+}
+.greedy-nav.greedy-nav .visible-links li ul li {
+  display: block;
+}
+.greedy-nav.greedy-nav .hidden-links {
+  position: absolute;
+  right: 0px;
+  top: 100%;
+}
+.greedy-nav.greedy-nav .hidden-links li {
+  display: block;
+  border-top: 1px solid $ssblack;
+}
+.greedy-nav.greedy-nav .visible-links li:first-child {
+  font-weight: bold;
+}
+.greedy-nav.greedy-nav .visible-links li:first-child a {
+  color: #9800ff !important;
+}
+.greedy-nav.greedy-nav .hidden {
+  visibility: hidden;
+}
+              
+      .greedy-nav li ul{              
+                    z-index:9999; 
+                    position: static;
+                     padding: 1.25em; /* 20 */
+                    padding-top: 0;
+                    display: none;
+                    top: 100%;
+
+
+                }               
+                   .greedy-nav li:hover ul{
+                    @include media($small-screen-down){
+                    position:static;
+}
+                       display: block;
+                       position: absolute;
+                    }
+

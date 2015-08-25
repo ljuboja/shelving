@@ -1,15 +1,24 @@
 body {
-  background-color: $light-gray;
+  background-color: white;
   color: $medium-gray;
+  @include media(max width $mobile){
+    padding:0 5%;
+  }
 }
 
 
 
-  .container {
-    text-align: center;
-
-    h1 {
-      font-weight: 200;
-    }
+  .row-wrapper {
+    @include row();
+    &:nth-child(odd) {
+      //background: tan;
+}
   }
 
+  .outer-container{
+    @include outer-container();
+  }
+
+  section, footer, article.why{
+    margin-bottom:modular-scale(5);
+  }
